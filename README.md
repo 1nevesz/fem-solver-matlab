@@ -118,5 +118,5 @@ fem-solver-matlab/
 **Guilherme Neves** — Mechatronics Engineering, EESC-USP São Carlos  
 Member of Tupã Formula SAE Electric
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/seu-perfil)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/neves-eesc)
 [![GitHub](https://img.shields.io/badge/GitHub-1nevesz-black?logo=github)](https://github.com/1nevesz)
