@@ -1,0 +1,47 @@
+% Howe Bridge — 6 nodes, 9 bars
+%
+% Geometry (metres)
+%
+%   4 --------- 5 --------- 6
+%   |  \        |        /  |
+%   |   \       |       /   |
+%   |    \      |      /    |
+%   1 --------- 2 --------- 3
+% (pin)   0  -50kN  0    (roller)
+%         ^            ^
+%        N2           N5
+%
+% Supports : node 1 pin (Ux=0, Uy=0), node 3 roller (Uy=0)
+% Loads    : 50 kN downward at nodes 2 and 5
+% Material : steel E=200 GPa, A=15 cm² for all members
+% Determinacy: m + r = 9 + 3 = 12 = 2n = 12  (statically determinate)
+
+NODES
+1  0.0  0.0
+2  3.0  0.0
+3  6.0  0.0
+4  0.0  3.0
+5  3.0  3.0
+6  6.0  3.0
+
+ELEMENTS
+%  id  ni  nj      E (Pa)    A (m^2)
+1   1   2  200e9   15e-4   % bottom chord left
+2   2   3  200e9   15e-4   % bottom chord right
+3   4   5  200e9   15e-4   % top chord left
+4   5   6  200e9   15e-4   % top chord right
+5   1   4  200e9   15e-4   % left vertical
+6   2   5  200e9   15e-4   % centre vertical
+7   3   6  200e9   15e-4   % right vertical
+8   1   5  200e9   15e-4   % left diagonal (Pratt — tension)
+9   2   6  200e9   15e-4   % right diagonal (Pratt — tension)
+
+FORCES
+%  node  Fx      Fy
+2   0   -50e3
+5   0   -50e3
+
+SUPPORTS
+%  node  restX  restY
+1   1   1   % pin
+3   0   1   % roller
